@@ -2,32 +2,31 @@ using System.Text.Json.Serialization;
 
 namespace DungeonTextGame;
 
-public class Character
+public static class Character
 {
-    public static int Level = 1;
-    public  enum Jobs { 전사, 마법사, 궁수, 도적, 성직자 }
-
-    public static Jobs Job = Jobs.전사;
-    public static float Damage = 10f;
-    public static float Defence = 5f;
-    public static float HealthPoint = 100f;
-    public static int Gold = 1500;
+    [JsonPropertyName("id")] public static string Id;
+    [JsonPropertyName("pw")]public static string Pw;
+    [JsonPropertyName("level")]public static int Level;
+    [JsonPropertyName("exp")]public static float Exp;
+    public  enum Jobs { 전사, 마법사, 궁수, 도적, 성직자, 무직 }
+    [JsonPropertyName("job")]public static Jobs Job;
+    [JsonPropertyName("damage")]public static float Damage;
+    [JsonPropertyName("defence")]public static float Defence;
+    [JsonPropertyName("hp")]public static float HealthPoint;
+    [JsonPropertyName("gold")]public static int Gold;
 }
 
 public class Item
 {
-    public enum itemTypes
+    public enum ItemTypes
     {
-        Weapon, Defender, Consumable
+        Weapon, Defender, Position, Consumable
     }
-    [JsonPropertyName("itemName")]
-    public string itemName { get; set; }
-    [JsonPropertyName("itemType")]
-    public itemTypes itemType { get; set; }
-    [JsonPropertyName("itemStatus")]
-    public int itemStatus { get; set; }
-    [JsonPropertyName("equipment")]
-    public bool equipment { get; set; }     
-    [JsonPropertyName("itemDesc")]
-    public string itemDesc { get; set; }
+    [JsonPropertyName("itemName")] public string ItemName { get; set; }
+    [JsonPropertyName("itemType")] public ItemTypes ItemType { get; set; }
+    [JsonPropertyName("itemStatus")] public int ItemStatus { get; set; }
+    [JsonPropertyName("equipment")] public bool Equipment { get; set; }     
+    [JsonPropertyName("itemDesc")] public string ItemDesc { get; set; }
+    [JsonPropertyName("buying")] public bool Buying { get; set; }
+    [JsonPropertyName("price")] public int Price { get; set; }
 }

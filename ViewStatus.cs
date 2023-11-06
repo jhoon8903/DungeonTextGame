@@ -13,6 +13,7 @@ public static class ViewStatus
             WriteLine("케릭터의 정보가 표시됩니다.");
             WriteLine();
 
+
             int characterLevel = Level;
             string chad = Job switch
             {
@@ -21,7 +22,7 @@ public static class ViewStatus
                 Jobs.궁수 => "궁수",
                 Jobs.도적 => "도적",
                 Jobs.성직자 => "성직자",
-                _ => "무직"
+                Jobs.무직 => "무직",
             };
             float damage = Damage;
             float defence = Defence;
@@ -30,10 +31,10 @@ public static class ViewStatus
 
             WriteLine($"LV : {characterLevel: 00}");
             WriteLine($"Chad : {chad}");
-            WriteLine($"공격력 : {damage}");
-            WriteLine($"방어력 : {defence}");
+            WriteLine($"공격력 : {damage + ViewInventory.additonalDamage} (+{ViewInventory.additonalDamage})");
+            WriteLine($"방어력 : {defence + ViewInventory.additonalDefence} (+{ViewInventory.additonalDefence})");
             WriteLine($"체력 : {hp}");
-            WriteLine($"Gold : {gold}");
+            WriteLine($"Gold : {gold} G");
             WriteLine();
             WriteLine("0. 나가기");
 

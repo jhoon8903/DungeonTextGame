@@ -1,0 +1,13 @@
+[
+  {
+    "id" : "daniel",
+    "pw" : "1q2w3e4r",
+    "level" : 1,
+    "exp" : 0,
+    "job" : 5,
+    "damage" : 10,
+    "defence" : 5,
+    "hp" : 100,
+    "gold" : 1500
+  }
+]

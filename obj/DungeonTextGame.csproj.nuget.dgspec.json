@@ -37,6 +37,32 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "ConsoleTables": {
+              "target": "Package",
+              "version": "[2.6.1, )"
+            },
+            "Emgu.CV": {
+              "target": "Package",
+              "version": "[4.8.1.5350, )"
+            },
+            "OpenCV": {
+              "target": "Package",
+              "version": "[2.4.11, )"
+            },
+            "SkiaSharp": {
+              "target": "Package",
+              "version": "[2.88.6, )"
+            },
+            "SkiaSharp.NativeAssets.macOS": {
+              "target": "Package",
+              "version": "[2.88.6, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[8.0.0-rc.2.23479.14, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -28,3 +28,15 @@
 /Users/daniel/Documents/GitHub/DungeonTextGame/obj/Debug/net7.0/DungeonTextGame.pdb
 /Users/daniel/Documents/GitHub/DungeonTextGame/obj/Debug/net7.0/DungeonTextGame.genruntimeconfig.cache
 /Users/daniel/Documents/GitHub/DungeonTextGame/obj/Debug/net7.0/ref/DungeonTextGame.dll
+/Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/ConsoleTables.dll
+/Users/daniel/Documents/GitHub/DungeonTextGame/obj/Debug/net7.0/DungeonTextGame.csproj.CopyComplete
+/Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/Emgu.CV.dll
+/Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/Microsoft.Win32.SystemEvents.dll
+/Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/System.Drawing.Common.dll
+/Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/System.Text.Json.dll
+/Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.dll
+/Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/SkiaSharp.dll
+/Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/runtimes/osx/native/libSkiaSharp.dylib
+/Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/runtimes/win-arm64/native/libSkiaSharp.dll
+/Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/runtimes/win-x64/native/libSkiaSharp.dll
+/Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/runtimes/win-x86/native/libSkiaSharp.dll

@@ -7,4 +7,17 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="ConsoleTables" Version="2.6.1" />
+      <PackageReference Include="Emgu.CV" Version="4.8.1.5350" />
+      <PackageReference Include="OpenCV" Version="2.4.11" />
+      <PackageReference Include="SkiaSharp" Version="2.88.6" />
+      <PackageReference Include="SkiaSharp.NativeAssets.macOS" Version="2.88.6" />
+      <PackageReference Include="System.Drawing.Common" Version="8.0.0-rc.2.23479.14" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Resources\" />
+    </ItemGroup>
+
 </Project>
