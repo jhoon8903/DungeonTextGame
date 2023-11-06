@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/daniel/Documents/GitHub/DungeonTextGame/DungeonTextGame/DungeonTextGame.csproj": {}
+    "/Users/daniel/Documents/GitHub/DungeonTextGame/DungeonTextGame.csproj": {}
   },
   "projects": {
-    "/Users/daniel/Documents/GitHub/DungeonTextGame/DungeonTextGame/DungeonTextGame.csproj": {
+    "/Users/daniel/Documents/GitHub/DungeonTextGame/DungeonTextGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/daniel/Documents/GitHub/DungeonTextGame/DungeonTextGame/DungeonTextGame.csproj",
+        "projectUniqueName": "/Users/daniel/Documents/GitHub/DungeonTextGame/DungeonTextGame.csproj",
         "projectName": "DungeonTextGame",
-        "projectPath": "/Users/daniel/Documents/GitHub/DungeonTextGame/DungeonTextGame/DungeonTextGame.csproj",
+        "projectPath": "/Users/daniel/Documents/GitHub/DungeonTextGame/DungeonTextGame.csproj",
         "packagesPath": "/Users/daniel/.nuget/packages/",
-        "outputPath": "/Users/daniel/Documents/GitHub/DungeonTextGame/DungeonTextGame/obj/",
+        "outputPath": "/Users/daniel/Documents/GitHub/DungeonTextGame/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/daniel/.nuget/NuGet/NuGet.Config"

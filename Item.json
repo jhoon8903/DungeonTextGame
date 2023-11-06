@@ -1,0 +1,16 @@
+[
+  {
+    "itemName" : "무쇠갑옷",
+    "itemType" : "Defender",
+    "itemStatus" : 5,
+    "equipment" : true,
+    "itemDesc" : "무쇠로 만들어져 튼튼한 갑옷입니다."
+  },
+  {
+    "itemName" : "낡은 검",
+    "itemType" : "Weapon",
+    "itemStatus" : 2,
+    "equipment" : false,
+    "itemDesc" : "쉽게 볼 수 있는 낡은 검 입니다."
+  }
+]
