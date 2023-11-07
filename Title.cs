@@ -2,42 +2,62 @@ using System.Text;
 
 namespace DungeonTextGame;
 
-public class Title
+public static class Title
 {
     public static void MainTitle()
     {
         OutputEncoding = Encoding.UTF8;
-        PrintLine("                                                                                                                      ", ConsoleColor.Gray);
-        PrintLine("                                                                                              ,-.----.               ", ConsoleColor.Gray);
-        PrintLine("    ,---,                                                                           ,-.----.  \\    /  \\   ,----..    ", ConsoleColor.Gray);
-        PrintLine("  .'  .' `\\                                                                         \\    /  \\ |   :    \\ /   /   \\   ", ConsoleColor.Gray);
-        PrintLine(",---.'     \\         ,--,      ,---,                      ,---.       ,---,         ;   :    \\|   |  .\\ |   :     :  ", ConsoleColor.Cyan);
-        PrintLine("|   |  .`\\  |      ,'_ /|  ,-+-. /  | ,----._,.          '   ,'\\  ,-+-. /  |        |   | .\\ :.   :  |: .   |  ;. /  ", ConsoleColor.Cyan);
-        PrintLine(":   : |  '  | .--. |  | : ,--.'|'   |/   /  ' /  ,---.  /   /   |,--.'|'   |        .   : |: ||   |   \\ .   ; /--`   ", ConsoleColor.Yellow);
-        PrintLine("|   ' '  ;  :'_ /| :  . ||   |  ,\"' |   :     | /     \\ .   ; ,. |   |  ,\"' |        |   |  \\ :|   : .   ;   | ;  __  ", ConsoleColor.Yellow);
-        PrintLine("'   | ;  .  |  ' | |  . .|   | /  | |   | .\\  ./    /  '   | |: |   | /  | |        |   : .  /;   | |`-'|   : |.' .' ", ConsoleColor.Green);
-        PrintLine("|   | :  |  |  | ' |  | ||   | |  | .   ; ';  .    ' / '   | .; |   | |  | |        ;   | |  \\|   | ;   .   | '_.' : ", ConsoleColor.Green);
-        PrintLine("'   : | /  ;:  | : ;  ; ||   | |  |/   .   . '   ;   /|   :    |   | |  |/         |   | ;\\  \\   ' |   '   ; : \\  | ", ConsoleColor.Magenta);
-        PrintLine("|   | '` ,/ '  :  `--'   |   | |--'  `---`-'| '   |  / |\\   \\  /|   | |--'          :   ' | \\.:   : :   '   | '/  .' ", ConsoleColor.Magenta);
-        PrintLine(";   :  .'   :  ,      .-.|   |/      .'__/_/: |   :    | `----' |   |/              :   : '- ' |   | :   |   :    /   ", ConsoleColor.Red);
-        PrintLine("|   ,.'      `--`----'   '---'       |   :    :\\   \\  /         '---'               |   |.'   `---'.|    \\   \\ .'    ", ConsoleColor.Red);
-        PrintLine("'---'                                 \\   \\  /  `----'                              `---'       `---`     `---`      ", ConsoleColor.Gray);
-        PrintLine("                                       `--`-'                                                                        ", ConsoleColor.Gray);
-        
-        WriteLine("\n\n");
-        ForegroundColor = ConsoleColor.Yellow;
-        WriteLine("1. 로그인");
-        WriteLine("2. 아이디생성");
-        WriteLine("3. 종료");
-        ResetColor();
+        string[] menuItems = { "    LOG IN    ", "CREATE ACCOUNT", "    E X I T   " };
+        int selectedMenuItem = 0;
+        while (true)
+        {        
+            Clear();
+            PrintLine("██████╗ ██╗   ██╗███╗   ██╗ ██████╗ ███████╗ ██████╗ ███╗   ██╗    ██████╗ ██████╗  ██████╗ ", ConsoleColor.Gray);
+            PrintLine("██╔══██╗██║   ██║████╗  ██║██╔════╝ ██╔════╝██╔═══██╗████╗  ██║    ██╔══██╗██╔══██╗██╔════╝ ", ConsoleColor.Gray);
+            PrintLine("██║  ██║██║   ██║██╔██╗ ██║██║  ███╗█████╗  ██║   ██║██╔██╗ ██║    ██████╔╝██████╔╝██║  ███╗", ConsoleColor.Cyan);
+            PrintLine("██║  ██║██║   ██║██║╚██╗██║██║   ██║██╔══╝  ██║   ██║██║╚██╗██║    ██╔══██╗██╔═══╝ ██║   ██║", ConsoleColor.Cyan);
+            PrintLine("██████╔╝╚██████╔╝██║ ╚████║╚██████╔╝███████╗╚██████╔╝██║ ╚████║    ██║  ██║██║     ╚██████╔╝", ConsoleColor.Yellow);
+            PrintLine("╚═════╝  ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═══╝    ╚═╝  ╚═╝╚═╝      ╚═════╝ ", ConsoleColor.Yellow);
+            WriteLine();
+            for (int i = 0; i < menuItems.Length; i++)
+            {
+                PrintLine($"\t\t\t██████ {menuItems[i]} ██████", i == selectedMenuItem ? ConsoleColor.Yellow : ConsoleColor.Gray);
+            }
 
-        // 사용자 입력을 받습니다.
-        WriteLine("\n옵션을 선택하고 Enter 키를 누르세요.");
-        string userInput = ReadLine();
-        // 사용자 입력에 따라 로직을 추가할 수 있습니다.
+            ConsoleKeyInfo keyInfo = ReadKey();
+            if (keyInfo.Key == ConsoleKey.UpArrow)
+            {
+                selectedMenuItem--;
+                if (selectedMenuItem < 0)
+                {
+                    selectedMenuItem = menuItems.Length - 1;
+                }
+            }
+            else if (keyInfo.Key == ConsoleKey.DownArrow)
+            {
+                selectedMenuItem++;
+                if (selectedMenuItem >= menuItems.Length)
+                {
+                    selectedMenuItem = 0;
+                }
+            }
+            else if (keyInfo.Key == ConsoleKey.Enter)
+            {
+                switch (selectedMenuItem)
+                {
+                    case 0: 
+                        Account.LogIn();
+                        break;
+                    case 1:
+                        Account.CreateAccount();
+                        break;
+                }
+                break;
+            }
+        }
     }
 
-    static void PrintLine(string line, ConsoleColor color)
+    private static void PrintLine(string line, ConsoleColor color)
     {
         ForegroundColor = color;
         WriteLine(line);

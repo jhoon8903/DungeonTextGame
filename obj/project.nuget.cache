@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "pBWWv9f6F120yePR9qAx/b9AzyysBG0reGWTsaKoHRy/lUi+8rbkLALIJDgfJE3/FbYAuTkxf5vBRYEb1uumaw==",
+  "dgSpecHash": "7QKnr+uR+37kaVNNYWNmpkER1VrBx9ugx164ldWW3OCC5kJIRHKYl09amxs8L/vRiJaoBv3W4Nldn8PdxgJBnw==",
   "success": true,
   "projectFilePath": "/Users/daniel/Documents/GitHub/DungeonTextGame/DungeonTextGame.csproj",
   "expectedPackageFiles": [
     "/Users/daniel/.nuget/packages/consoletables/2.6.1/consoletables.2.6.1.nupkg.sha512",
     "/Users/daniel/.nuget/packages/emgu.cv/4.8.1.5350/emgu.cv.4.8.1.5350.nupkg.sha512",
+    "/Users/daniel/.nuget/packages/konscious.security.cryptography.argon2/1.3.0/konscious.security.cryptography.argon2.1.3.0.nupkg.sha512",
+    "/Users/daniel/.nuget/packages/konscious.security.cryptography.blake2/1.1.0/konscious.security.cryptography.blake2.1.1.0.nupkg.sha512",
     "/Users/daniel/.nuget/packages/microsoft.netcore.platforms/1.1.1/microsoft.netcore.platforms.1.1.1.nupkg.sha512",
     "/Users/daniel/.nuget/packages/microsoft.netcore.targets/1.1.3/microsoft.netcore.targets.1.1.3.nupkg.sha512",
     "/Users/daniel/.nuget/packages/microsoft.win32.systemevents/8.0.0-rc.2.23479.6/microsoft.win32.systemevents.8.0.0-rc.2.23479.6.nupkg.sha512",
@@ -18,6 +20,7 @@
     "/Users/daniel/.nuget/packages/system.drawing.primitives/4.3.0/system.drawing.primitives.4.3.0.nupkg.sha512",
     "/Users/daniel/.nuget/packages/system.globalization/4.3.0/system.globalization.4.3.0.nupkg.sha512",
     "/Users/daniel/.nuget/packages/system.io/4.3.0/system.io.4.3.0.nupkg.sha512",
+    "/Users/daniel/.nuget/packages/system.memory/4.5.4/system.memory.4.5.4.nupkg.sha512",
     "/Users/daniel/.nuget/packages/system.reflection/4.3.0/system.reflection.4.3.0.nupkg.sha512",
     "/Users/daniel/.nuget/packages/system.reflection.extensions/4.3.0/system.reflection.extensions.4.3.0.nupkg.sha512",
     "/Users/daniel/.nuget/packages/system.reflection.primitives/4.3.0/system.reflection.primitives.4.3.0.nupkg.sha512",

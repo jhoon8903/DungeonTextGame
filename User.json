@@ -1,13 +1,29 @@
 [
   {
-    "id" : "daniel",
-    "pw" : "1q2w3e4r",
-    "level" : 1,
-    "exp" : 0,
-    "job" : 5,
-    "damage" : 10,
-    "defence" : 5,
-    "hp" : 100,
-    "gold" : 1500
+    "id": "Master",
+    "pw": "uXSnqOiXKs3va9nRneO9lhRX5f6Xf7PkXlUKwZJJWd55tElTSAav/BwUGcKWlLfj1OEIXVWHqXVSzna+OBovhFyYcVYn8bP3MD59Ni9P+GSLnewNLtwZ0HNxyUvkGC9A/sYhTK6BUto50+peZFYGZiu6GnOU6rQledkgJbOfraT5zM8F6QOoDy9Qw1PFYkhT",
+    "level": 1,
+    "exp": 0,
+    "job": 5,
+    "damage": 10,
+    "itemDamage": 5,
+    "defence": 5,
+    "itemDefence": 9,
+    "hp": 100,
+    "gold": 0,
+    "inventory": {
+      "무쇠갑옷": {
+        "toOwn": true,
+        "equipment": true
+      },
+      "낡은 검": {
+        "toOwn": true,
+        "equipment": false
+      },
+      "청동 도끼": {
+        "toOwn": true,
+        "equipment": true
+      }
+    }
   }
 ]
