@@ -6,15 +6,14 @@ using Konscious.Security.Cryptography;
 
 namespace DungeonTextGame;
 
-public class Account
+public static class Account
 {
     public static Character LoginCharacter { get; set; } = null!;
     public static List<Character>? Users = new ();
 
     public static void LoadAccountData()
     {
-        string jsonFilePath = "/Users/daniel/Documents/GitHub/DungeonTextGame/User.json";
-        string jsonString = File.ReadAllText(jsonFilePath);
+        string jsonString = File.ReadAllText(GameManager.CharacterFilePath);
         if (jsonString != null)
         {
             Users = JsonSerializer.Deserialize<List<Character>>(jsonString);
@@ -67,21 +66,27 @@ public class Account
         {
             ForegroundColor = ConsoleColor.Cyan;
             WriteLine("Create Account");
+            WriteLine("0. 나가기"); 
             WriteLine("\n");
             ResetColor();
             Write("생성할 ID를 입력하세여 (영) >>  ");
             string id = ReadLine();
             Character? user = Users.FirstOrDefault(u => u.Id == id);
-            if (user!= null)
+            if (id == "0")
+            {
+                Title.MainTitle();
+            }
+            if (user!= null && id != "0")
             {
                 ForegroundColor = ConsoleColor.Red;
                 WriteLine("이미 존재하는 계정입니다.");
                 ResetColor();
-                continue;
             }
-            var pw = InputPassword();
-            SaveAccount(id, pw);
-            break;
+            else
+            {
+                var pw = InputPassword();
+                SaveAccount(id, pw);
+            }
         }
     }
 
@@ -111,7 +116,7 @@ public class Account
     private static void SaveAccount(string id, string pw)
     {
         string hashedPassword = HashPassword(pw);
-        const string accountFilePath = "/Users/daniel/Documents/GitHub/DungeonTextGame/User.json";
+        const string accountFilePath = GameManager.CharacterFilePath;
         string jsonString = File.ReadAllText(accountFilePath, Encoding.UTF8);
         List<Character> accounts = JsonSerializer.Deserialize<List<Character>>(jsonString) ?? new List<Character>();
         Character newAccount = new Character
@@ -121,11 +126,11 @@ public class Account
             Level = 1,
             Exp = 0.0f,
             Job = Character.Jobs.무직,
-            Damage = 10.0f,
+            Damage = 10,
             ItemDamage = 0,
-            Defence = 5.0f,
+            Defence = 5,
             ItemDefence = 0,
-            HealthPoint = 100.0f,
+            HealthPoint = 100,
             Gold = 1500,
             Inventory = new Dictionary<string, InventoryItem>
             {
@@ -149,13 +154,9 @@ public class Account
             if (inputKey.Key == ConsoleKey.Enter)
             {
                Program.Main();
+               break;
             }
-            else
-            {
-                WriteLine("입력값이 올바르지 않습니다.");
-                continue;
-            }
-            break;
+            WriteLine("입력값이 올바르지 않습니다.");
         }
     }
 

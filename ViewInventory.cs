@@ -1,12 +1,4 @@
-using System.Text.Json;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using System.Text.Encodings.Web;
-using System.Text.Json.Serialization;
 using ConsoleTables;
-using Emgu.CV.Aruco;
-
 namespace DungeonTextGame;
 
 public static class ViewInventory
@@ -58,7 +50,6 @@ public static class ViewInventory
                 Item.ItemTypes.Weapon => "공격력",
                 Item.ItemTypes.Defender => "방어력",
                 Item.ItemTypes.Position => "회복량",
-                Item.ItemTypes.Consumable => "수량",
                 _ => ""
             };
             table.AddRow($"{indexDisplay}{equipment}{characterItem.ItemName}", $"{itemType} +{characterItem.ItemStatus}", characterItem.ItemDesc);
@@ -68,9 +59,9 @@ public static class ViewInventory
 
     public static void EquipmentManger(List<Item> itemList)
     {
-        Clear();
         while (true)
         {
+            Clear();
             WriteLine("인벤토리 - [장착 관리]"); 
             WriteLine("보유 중인 아이템을 관리할 수 있습니다.\n\n");
             ShowItemList(GameManager.ItemList, GameManager.SelectCommand.Equip);

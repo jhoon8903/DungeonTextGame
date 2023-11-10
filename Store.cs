@@ -61,8 +61,7 @@ public static class Store
             {
                 Item.ItemTypes.Weapon => "공격력",
                 Item.ItemTypes.Defender => "방어력",
-                Item.ItemTypes.Position => "회복량", 
-                Item.ItemTypes.Consumable => "수량",                                                                                                   
+                Item.ItemTypes.Position => "회복량",
                 _ => ""
             };
             table.AddRow($"{indexDisplay}{item.ItemName}", $"{itemType} +{item.ItemStatus}", item.ItemDesc, $"{itemPurchase}");
@@ -137,19 +136,17 @@ public static class Store
                 .ToDictionary(item => item.Key, item => item.Value);
             foreach (var item in GameManager.ItemList)
             {
-                foreach (var ownItem in characterOwnItemList)
+                if (characterOwnItemList.ContainsKey(item.ItemName))
                 {
-                    if (!ownItem.Value.ToOwn) continue;
                     int itemSellPrice = (int)(item.Price * 0.85f);
                     string itemType = item.ItemType switch
                     {
                         Item.ItemTypes.Weapon => "공격력",
                         Item.ItemTypes.Defender => "방어력",
-                        Item.ItemTypes.Position => "회복량", 
-                        Item.ItemTypes.Consumable => "수량",
+                        Item.ItemTypes.Position => "회복량",
                         _ => ""
                     };
-                    table.AddRow($"{itemIndex++}{item.ItemName}", $"{itemType} +{item.ItemStatus}", item.ItemDesc, $"{itemSellPrice} G");
+                    table.AddRow($"{itemIndex++}. {item.ItemName}", $"{itemType} +{item.ItemStatus}", item.ItemDesc, $"{itemSellPrice} G");
                     sellItemList.Add(item);
                 }
             }
@@ -158,15 +155,21 @@ public static class Store
             WriteLine("판매사실 아이템의 번호를 입력하세요");
             string? selectCommand = ReadLine();
 
-            if (int.TryParse(selectCommand, out int selectedIndex) && selectedIndex > 0 && selectedIndex <= characterOwnItemList.Count)
+            if (selectCommand == "0")
+            {
+                StoreShop();
+            }
+            else if (int.TryParse(selectCommand, out int selectedIndex) && selectedIndex > 0 && selectedIndex <= characterOwnItemList.Count)
             {
                 Item selectedItem = sellItemList[selectedIndex - 1];
-                characterOwnItemList.Remove(selectedItem.ItemName);
                 Account.LoginCharacter.Gold+= (int)(selectedItem.Price * 0.85f);
+                GameManager.DeleteItemToInventory(selectedItem.ItemName);
                 GameManager.Save();
-                continue;
             }
-            WriteLine("잘못된 입력입니다.");
+            else
+            {
+                WriteLine("잘못된 입력입니다.");
+            }
         }
     }
 }

@@ -25,8 +25,8 @@ public static class ViewStatus
             };
             float damage = character.Damage;
             float itemDamage = character.ItemDamage;
-            float defence = character.Defence;
-            float itemDefence = character.ItemDefence;
+            int defence = character.Defence;
+            int itemDefence = character.ItemDefence;
             float hp = character.HealthPoint;
             float gold = character.Gold;
 

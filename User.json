@@ -2,15 +2,16 @@
   {
     "id": "Master",
     "pw": "uXSnqOiXKs3va9nRneO9lhRX5f6Xf7PkXlUKwZJJWd55tElTSAav/BwUGcKWlLfj1OEIXVWHqXVSzna+OBovhFyYcVYn8bP3MD59Ni9P+GSLnewNLtwZ0HNxyUvkGC9A/sYhTK6BUto50+peZFYGZiu6GnOU6rQledkgJbOfraT5zM8F6QOoDy9Qw1PFYkhT",
-    "level": 1,
+    "dungeonClear": 0,
+    "level": 2,
     "exp": 0,
     "job": 5,
     "damage": 10,
-    "itemDamage": 5,
+    "itemDamage": 2,
     "defence": 5,
-    "itemDefence": 9,
-    "hp": 100,
-    "gold": 0,
+    "itemDefence": 14,
+    "hp": 35,
+    "gold": 10500,
     "inventory": {
       "무쇠갑옷": {
         "toOwn": true,
@@ -18,11 +19,75 @@
       },
       "낡은 검": {
         "toOwn": true,
+        "equipment": true
+      }
+    }
+  },
+  {
+    "id": "0",
+    "pw": "AFz8P+4PtU63TaimMgWw0YotVVmy8t5N9IhYyxLaLY39z9Mg9+qZEWs2e21ZGu3dLSBeIXqX1UJNIWoIqKfYALe/WexvMDZGZBEJy2e+i7hJ8T6wv/VD24xYhy+q66Qp0mdolMmCcadKCSfTJZXJGLs67+kX3l0dqJ999iW7fVEu4xYsXiekteoFvn3v3zys",
+    "dungeonClear": 0,
+    "level": 1,
+    "exp": 0,
+    "job": 5,
+    "damage": 10,
+    "itemDamage": 0,
+    "defence": 5,
+    "itemDefence": 0,
+    "hp": 100,
+    "gold": 1500,
+    "inventory": {
+      "무쇠갑옷": {
+        "toOwn": true,
         "equipment": false
       },
-      "청동 도끼": {
+      "낡은 검": {
         "toOwn": true,
-        "equipment": true
+        "equipment": false
+      }
+    }
+  },
+  {
+    "id": "1",
+    "pw": "9aOMcTMuzpkhFMZU2W86QFh42amC/h3Y5CAm9VEmv7cjqqNVkWOa9DZ4N9OvnEmhNqPKkNfZKCV8rsZeD9mce/Q2zDvTWAKxo2HM2c75czbi687H+Afvr/GA2QJ4sPO5o4vJadfA1D48axPgLLbi/grSY62cbd7pDgfK6WhWgU6uVsJqk8llPWjKTbW9exuX",
+    "dungeonClear": 0,
+    "level": 1,
+    "exp": 0,
+    "job": 5,
+    "damage": 10,
+    "itemDamage": 0,
+    "defence": 5,
+    "itemDefence": 0,
+    "hp": 100,
+    "gold": 1585,
+    "inventory": {
+      "낡은 검": {
+        "toOwn": true,
+        "equipment": false
+      }
+    }
+  },
+  {
+    "id": "Slave",
+    "pw": "ImSO8QOu4NMvmtc4hxjFeZEBjr4IdNgCjxkMmohGL5iUQQzoHzYDHVjrbJLZ8ESBx1qyO0T9LwCdu+dpXeo1196gOcETXpgYNglpGBxDJeJrou81m1LMMBqI72IXg3poOA9oe6gP3AJLIiTaF2H7sgbrufYpcfkxq9gshgVPtpsNB8aWrODo2xGM5N7Qh2+c",
+    "dungeonClear": 0,
+    "level": 1,
+    "exp": 0,
+    "job": 5,
+    "damage": 10,
+    "itemDamage": 0,
+    "defence": 5,
+    "itemDefence": 0,
+    "hp": 100,
+    "gold": 1500,
+    "inventory": {
+      "무쇠갑옷": {
+        "toOwn": true,
+        "equipment": false
+      },
+      "낡은 검": {
+        "toOwn": true,
+        "equipment": false
       }
     }
   }

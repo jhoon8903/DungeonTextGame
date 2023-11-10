@@ -6,7 +6,7 @@ public class Item
 {
     public enum ItemTypes
     {
-        Weapon, Defender, Position, Consumable
+        Weapon, Defender, Position
     }
     [JsonPropertyName("itemName")] public string ItemName { get; set; }
     [JsonPropertyName("itemType")] public ItemTypes ItemType { get; set; }
