@@ -2,22 +2,26 @@
   {
     "id": "Master",
     "pw": "uXSnqOiXKs3va9nRneO9lhRX5f6Xf7PkXlUKwZJJWd55tElTSAav/BwUGcKWlLfj1OEIXVWHqXVSzna+OBovhFyYcVYn8bP3MD59Ni9P+GSLnewNLtwZ0HNxyUvkGC9A/sYhTK6BUto50+peZFYGZiu6GnOU6rQledkgJbOfraT5zM8F6QOoDy9Qw1PFYkhT",
-    "dungeonClear": 0,
+    "dungeonClear": 1,
     "level": 2,
     "exp": 0,
     "job": 5,
     "damage": 10,
     "itemDamage": 2,
     "defence": 5,
-    "itemDefence": 14,
-    "hp": 35,
-    "gold": 10500,
+    "itemDefence": 20,
+    "hp": 100,
+    "gold": 8200,
     "inventory": {
       "무쇠갑옷": {
         "toOwn": true,
-        "equipment": true
+        "equipment": false
       },
       "낡은 검": {
+        "toOwn": true,
+        "equipment": true
+      },
+      "스파르타의 갑옷": {
         "toOwn": true,
         "equipment": true
       }
