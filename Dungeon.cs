@@ -63,7 +63,7 @@ public static class Dungeon
                         switch (selectCommand)
                         {
                             case 0:
-                                GameManager.GameStart();
+                             GameManager.GameStart();
                                 return;
                             case 1:
                             case 2:
@@ -81,7 +81,7 @@ public static class Dungeon
                 ForegroundColor = ConsoleColor.Red;
                 WriteLine("HP가 0 입니다. 키를 입력하시면 Main 화면으로 복귀합니다.");
                 ResetColor();
-                ReadKey();
+                ReadKey(); 
                 GameManager.GameStart();
                 break;
         }

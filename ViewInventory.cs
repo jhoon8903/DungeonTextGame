@@ -25,7 +25,7 @@ public static class ViewInventory
             }
             if (command == "0")
             {
-                GameManager.GameStart();
+               GameManager.GameStart();
                 break;
             }
             GameManager.WrongCommand();

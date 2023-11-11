@@ -27,7 +27,8 @@ public static class GameManager
             WriteLine("3. 상점");
             WriteLine("4. 던전입장");
             WriteLine("5. 휴식하기");
-            WriteLine("6. 로그아웃\n");
+            WriteLine("6. 채팅하기");
+            WriteLine("7. 로그아웃\n");
             WriteLine("원하시는 행동을 입력해주세요"); 
             Write(">>");
             string? command = ReadLine();
@@ -50,8 +51,11 @@ public static class GameManager
                         break; 
                     case 5:
                         Rest();
-                        break;
+                        break; 
                     case 6:
+                       ChatSocket.ChatRoomAsync();
+                        break;
+                    case 7:
                         Title.MainTitle();
                         break;
                 }                                    
@@ -99,7 +103,7 @@ public static class GameManager
         WriteLine("입력 값이 잘못 되었습니다. 다시 입력해주세요\n");
     }
 
-    public static void Rest()
+    private static void Rest()
     {
         while (true)
         {
@@ -148,10 +152,8 @@ public static class GameManager
             Save();
             ForegroundColor = ConsoleColor.Green;
             WriteLine("케릭터의 체력이 회복 되었습니다!");
-            ResetColor();
-            WriteLine("아무키나 누르시면 메인화면으로 돌아갑니다.");
-            ReadKey();
-            GameStart();
+
+         
         }
         else
         {
@@ -161,7 +163,10 @@ public static class GameManager
             ResetColor();
             WriteLine("아무키나 입력하면 메인화면으로 이동합니다.");
             ReadKey();
-            GameStart();
         }
+        ResetColor();
+        WriteLine("아무키나 누르시면 메인화면으로 돌아갑니다.");
+        ReadKey();
+        GameStart();
     }
 }

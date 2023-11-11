@@ -43,3 +43,12 @@
 /Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/Konscious.Security.Cryptography.Argon2.dll
 /Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/Konscious.Security.Cryptography.Blake2.dll
 /Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/Newtonsoft.Json.dll
+/Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/EmitterSharp.dll
+/Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/EngineIOSharp.dll
+/Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/SimpleThreadMonitor.dll
+/Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/SocketIOSharp.dll
+/Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/WebSocketSharp.CustomHeaders.CustomHttpServer.dll
+/Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/Socket.Io.Client.Core.dll
+/Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/System.Reactive.dll
+/Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/Websocket.Client.dll

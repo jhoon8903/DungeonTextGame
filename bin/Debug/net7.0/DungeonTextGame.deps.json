@@ -15,6 +15,8 @@
           "OpenCV": "2.4.11",
           "SkiaSharp": "2.88.6",
           "SkiaSharp.NativeAssets.macOS": "2.88.6",
+          "Socket.Io.Client.Core": "1.2.0",
+          "SocketIOSharp": "2.0.3",
           "System.Drawing.Common": "8.0.0-rc.2.23479.14"
         },
         "runtime": {
@@ -43,6 +45,31 @@
           }
         }
       },
+      "EmitterSharp/1.1.1.1": {
+        "dependencies": {
+          "SimpleThreadMonitor": "1.0.2.1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/EmitterSharp.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "EngineIOSharp/1.0.5": {
+        "dependencies": {
+          "EmitterSharp": "1.1.1.1",
+          "Newtonsoft.Json": "13.0.3",
+          "SimpleThreadMonitor": "1.0.2.1",
+          "WebSocketSharp.CustomHeaders.CustomHttpServer": "1.0.2.3"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/EngineIOSharp.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Konscious.Security.Cryptography.Argon2/1.3.0": {
         "dependencies": {
           "Konscious.Security.Cryptography.Blake2": "1.1.0",
@@ -60,6 +87,14 @@
           "lib/net6.0/Konscious.Security.Cryptography.Blake2.dll": {
             "assemblyVersion": "1.1.0.0",
             "fileVersion": "1.1.0.0"
+          }
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/5.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
           }
         }
       },
@@ -94,6 +129,14 @@
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.1",
           "Microsoft.NETCore.Targets": "1.1.3"
+        }
+      },
+      "SimpleThreadMonitor/1.0.2.1": {
+        "runtime": {
+          "lib/netcoreapp3.0/SimpleThreadMonitor.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "SkiaSharp/2.88.6": {
@@ -136,6 +179,31 @@
           }
         }
       },
+      "Socket.Io.Client.Core/1.2.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "5.0.0",
+          "System.Reactive": "5.0.0",
+          "System.Text.Json": "7.0.3",
+          "Websocket.Client": "4.3.30"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Socket.Io.Client.Core.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.0"
+          }
+        }
+      },
+      "SocketIOSharp/2.0.3": {
+        "dependencies": {
+          "EngineIOSharp": "1.0.5"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SocketIOSharp.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "System.Drawing.Common/8.0.0-rc.2.23479.14": {
         "dependencies": {
           "Microsoft.Win32.SystemEvents": "8.0.0-rc.2.23479.6"
@@ -170,6 +238,14 @@
         }
       },
       "System.Memory/4.5.4": {},
+      "System.Reactive/5.0.0": {
+        "runtime": {
+          "lib/net5.0/System.Reactive.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.1"
+          }
+        }
+      },
       "System.Reflection/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.1",
@@ -269,11 +345,32 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
+      "System.Threading.Channels/4.7.0": {},
       "System.Threading.Tasks/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.1",
           "Microsoft.NETCore.Targets": "1.1.3",
           "System.Runtime": "4.3.1"
+        }
+      },
+      "Websocket.Client/4.3.30": {
+        "dependencies": {
+          "System.Reactive": "5.0.0",
+          "System.Threading.Channels": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Websocket.Client.dll": {
+            "assemblyVersion": "4.3.0.0",
+            "fileVersion": "4.3.0.0"
+          }
+        }
+      },
+      "WebSocketSharp.CustomHeaders.CustomHttpServer/1.0.2.3": {
+        "runtime": {
+          "lib/netcoreapp3.0/WebSocketSharp.CustomHeaders.CustomHttpServer.dll": {
+            "assemblyVersion": "1.0.2.3",
+            "fileVersion": "1.0.2.3"
+          }
         }
       }
     }
@@ -298,6 +395,20 @@
       "path": "emgu.cv/4.8.1.5350",
       "hashPath": "emgu.cv.4.8.1.5350.nupkg.sha512"
     },
+    "EmitterSharp/1.1.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DeLFZVYsMAn3tu80aEbzrZkhD+ka53fcU2+Iw6PGjVplVMrWi0GnpGU2Mg7ixYVxSTCOJtcot5Hr57iz6Xxnlw==",
+      "path": "emittersharp/1.1.1.1",
+      "hashPath": "emittersharp.1.1.1.1.nupkg.sha512"
+    },
+    "EngineIOSharp/1.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ijN9BtAybNA5SaLgU8uEu9FEHBQ/XIsqVg8egqXnJ3Bw3Fck/934QTRFcGzCIBifIoziBLLhS6arYI17Ur5/OA==",
+      "path": "engineiosharp/1.0.5",
+      "hashPath": "engineiosharp.1.0.5.nupkg.sha512"
+    },
     "Konscious.Security.Cryptography.Argon2/1.3.0": {
       "type": "package",
       "serviceable": true,
@@ -311,6 +422,13 @@
       "sha512": "sha512-enWOzNAlBjFcKoiBNVVLsa1ZzOciExznu+sUURE8dx322GI1LzrBxzEuZqjeOoK9oo9RubLtg96/7Y4JtUk9zA==",
       "path": "konscious.security.cryptography.blake2/1.1.0",
       "hashPath": "konscious.security.cryptography.blake2.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging.Abstractions/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NxP6ahFcBnnSfwNBi2KH2Oz8Xl5Sm2krjId/jRR3I7teFphwiUoUeZPwTNA21EX+5PtjqmyAvKaOeBXcJjcH/w==",
+      "path": "microsoft.extensions.logging.abstractions/5.0.0",
+      "hashPath": "microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.1": {
       "type": "package",
@@ -354,6 +472,13 @@
       "path": "runtime.native.system/4.3.0",
       "hashPath": "runtime.native.system.4.3.0.nupkg.sha512"
     },
+    "SimpleThreadMonitor/1.0.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UrJWDqlYRncLH36dEo755JoHIHs8KwpU1C7TCh4vTF6nusyUZMwGOfB750NYugGieqFRU9pepGaAKA3yOXONKw==",
+      "path": "simplethreadmonitor/1.0.2.1",
+      "hashPath": "simplethreadmonitor.1.0.2.1.nupkg.sha512"
+    },
     "SkiaSharp/2.88.6": {
       "type": "package",
       "serviceable": true,
@@ -374,6 +499,20 @@
       "sha512": "sha512-7TzFO0u/g2MpQsTty4fyCDdMcfcWI+aLswwfnYXr3gtNS6VLKdMXPMeKpJa3pJSLnUBN6wD0JjuCe8OoLBQ6cQ==",
       "path": "skiasharp.nativeassets.win32/2.88.6",
       "hashPath": "skiasharp.nativeassets.win32.2.88.6.nupkg.sha512"
+    },
+    "Socket.Io.Client.Core/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5iwPuKcyjAzAn7ootIJ71mn7UYtnwydZ6b1p8lKvgHY+dhCnwHLoDgbFMYx95m1SRYxFMN7RYRwFV64l9eFwag==",
+      "path": "socket.io.client.core/1.2.0",
+      "hashPath": "socket.io.client.core.1.2.0.nupkg.sha512"
+    },
+    "SocketIOSharp/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FqgyJj9czFaPOzD8lbNcT0NxViGX5K8nJTtTelAe61KcHPx14961o8kL+DCJmyoHtSazas5qB4hvoCl1kgohwQ==",
+      "path": "socketiosharp/2.0.3",
+      "hashPath": "socketiosharp.2.0.3.nupkg.sha512"
     },
     "System.Drawing.Common/8.0.0-rc.2.23479.14": {
       "type": "package",
@@ -409,6 +548,13 @@
       "sha512": "sha512-1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
       "path": "system.memory/4.5.4",
       "hashPath": "system.memory.4.5.4.nupkg.sha512"
+    },
+    "System.Reactive/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-erBZjkQHWL9jpasCE/0qKAryzVBJFxGHVBAvgRN1bzM0q2s1S4oYREEEL0Vb+1kA/6BKb5FjUZMp5VXmy+gzkQ==",
+      "path": "system.reactive/5.0.0",
+      "hashPath": "system.reactive.5.0.0.nupkg.sha512"
     },
     "System.Reflection/4.3.0": {
       "type": "package",
@@ -501,12 +647,33 @@
       "path": "system.threading/4.3.0",
       "hashPath": "system.threading.4.3.0.nupkg.sha512"
     },
+    "System.Threading.Channels/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gdOOXBhtt2UpTxYJm1DRmoqNfYg5ypvhzhVt0vxKhzxXFjS81r8yIOSFsJYLRa1Jc14GBAqCnjxJstO3zBN7gg==",
+      "path": "system.threading.channels/4.7.0",
+      "hashPath": "system.threading.channels.4.7.0.nupkg.sha512"
+    },
     "System.Threading.Tasks/4.3.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
+    },
+    "Websocket.Client/4.3.30": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sCspVWUhVVmTHusBm4dnyaCoHRHGn/NI7XeTGPxpAd8Ko9qTZBuXiGFbDAVYARZDx9yxwLEVp7peEnCtZhqhug==",
+      "path": "websocket.client/4.3.30",
+      "hashPath": "websocket.client.4.3.30.nupkg.sha512"
+    },
+    "WebSocketSharp.CustomHeaders.CustomHttpServer/1.0.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Mf7z030hh+zyf+yMRcpcXG6MaApqNOjR9bsZKhXLa2054q8jiE/1DHG8uVNDmcpVpv3uTTDV0FFA3q1iukVACg==",
+      "path": "websocketsharp.customheaders.customhttpserver/1.0.2.3",
+      "hashPath": "websocketsharp.customheaders.customhttpserver.1.0.2.3.nupkg.sha512"
     }
   }
 }

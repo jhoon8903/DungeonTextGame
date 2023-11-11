@@ -4,7 +4,7 @@ namespace DungeonTextGame;
 
 public static class ViewStatus
 {
-    public static void Status()
+    public static void  Status()
     {
         Character character = Account.LoginCharacter;
         while (true)
