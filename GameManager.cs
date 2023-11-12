@@ -14,7 +14,7 @@ public static class GameManager
     public const string CharacterFilePath = "/Users/daniel/Documents/GitHub/DungeonTextGame/User.json"; 
     private const string ItemFilePath =  "/Users/daniel/Documents/GitHub/DungeonTextGame/Item.json";
 
-    public static void GameStart()
+    public static async Task GameStart()
     {
         Clear();
         InitItem();
@@ -39,29 +39,35 @@ public static class GameManager
                 {
                     case 1:
                         ViewStatus.Status();
-                        break;
+                        return;
                     case 2:
                         ViewInventory.Inventory();
-                        break;
+                        return;
                     case 3:
                         Store.StoreShop();
-                        break;
+                        return;
                     case 4:
                         Dungeon.DungeonLobby();
-                        break; 
+                        return;
                     case 5:
                         Rest();
-                        break; 
+                        return;
                     case 6:
-                       ChatSocket.ChatRoomAsync();
-                        break;
+                       await ChatSocket.ChatRoomAsync();
+                       WriteLine("채팅방");
+                       return;
                     case 7:
                         Title.MainTitle();
-                        break;
+                        return;
+                    default:
+                        WrongCommand();
+                        continue;
                 }                                    
             }
-            Clear(); 
-            WrongCommand();
+            else
+            {
+                continue;
+            }
         }
     }
     private static void InitItem()

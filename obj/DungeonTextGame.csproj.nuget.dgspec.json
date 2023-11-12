@@ -66,13 +66,9 @@
               "target": "Package",
               "version": "[2.88.6, )"
             },
-            "Socket.Io.Client.Core": {
+            "SocketIOClient": {
               "target": "Package",
-              "version": "[1.2.0, )"
-            },
-            "SocketIOSharp": {
-              "target": "Package",
-              "version": "[2.0.3, )"
+              "version": "[3.1.1, )"
             },
             "System.Drawing.Common": {
               "target": "Package",
