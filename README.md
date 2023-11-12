@@ -16,86 +16,8 @@ Dungeon RPG
 
 ### Class 구성
 
-```mermaid!
-classDiagram
-Title --|> Account
-Character --|> Account
-Item --|> Account
-Account --|> GameManager
-GameManager --|> ViewStatus
-GameManager --|> ViewInventory
-GameManager --|> Store
-GameManager --|> Dungeon
-GameManager --|> APIManager
-class Title{
-	string[] menuItems;
-	MainTitle()
-}
-class Character{
-	id, pw, level, exp, 
-	job, damage,...,inventory
-}
-class Account{
-	Character LoginCharacter
-	List ItemList
-	Login()
-	CreateAccount()
-	InputPassword()
-	SaveAccount()
-	VerifyPassword()
-	HashPassword()
-	CreateSlat()
-}
-class Item{
-	itemName, itemType, 
-	itemstatus, itemDesc, price
-}
-class GameManager{
-	List ItemList
-	enum SelectCommand
-	string characterFilePath
-	string itemFilePath
-	GameStart()
-	Save()
-	DeleteItemInventory()
-}
-class ViewStatus{
-	Character character 
-	= Account.LoginCharacter
-	Status()
-}
-class ViewInventory{
-	Dictionary _ownedItems
-	Inventory()
-	ShowItemList()
-	EquipmentManager()
-}
-class Store{
-	StoreShop()
-	StoreDisplay()
-	BuyStore()
-	SellStore()
-}
-class Dungeon{
-	DungeonLobby()
-	DungeonEntrance()
-	DungeonClearProcess()
-	FailDungeon()
-	ClearDungeon()
-	MappingDungeonLevel()
-	DecreaseCharacterHp()
-	IncreaseGold()
-}
-class APIManager{
-	Post Item()
-	Get Item()
-	Fetch Item()
-	Get Account()
-	Post Account()
-	Post Status()
-	Get Status()
-}
-```
+![](https://mermaid.ink/svg/eyJjb2RlIjoiY2xhc3NEaWFncmFtXG5UaXRsZSAtLXw-IEFjY291bnRcbkNoYXJhY3RlciAtLXw-IEFjY291bnRcbkl0ZW0gLS18PiBBY2NvdW50XG5BY2NvdW50IC0tfD4gR2FtZU1hbmFnZXJcbkdhbWVNYW5hZ2VyIC0tfD4gVmlld1N0YXR1c1xuR2FtZU1hbmFnZXIgLS18PiBWaWV3SW52ZW50b3J5XG5HYW1lTWFuYWdlciAtLXw-IFN0b3JlXG5HYW1lTWFuYWdlciAtLXw-IER1bmdlb25cbkdhbWVNYW5hZ2VyIC0tfD4gQVBJTWFuYWdlclxuY2xhc3MgVGl0bGV7XG5zdHJpbmdbXSBtZW51SXRlbXM7XG5NYWluVGl0bGUoKVxufVxuY2xhc3MgQ2hhcmFjdGVye1xuaWQsIHB3LCBsZXZlbCwgZXhwLFxuam9iLCBkYW1hZ2UsLi4uLGludmVudG9yeVxufVxuY2xhc3MgQWNjb3VudHtcbkNoYXJhY3RlciBMb2dpbkNoYXJhY3RlclxuTGlzdCBJdGVtTGlzdFxuTG9naW4oKVxuQ3JlYXRlQWNjb3VudCgpXG5JbnB1dFBhc3N3b3JkKClcblNhdmVBY2NvdW50KClcblZlcmlmeVBhc3N3b3JkKClcbkhhc2hQYXNzd29yZCgpXG5DcmVhdGVTbGF0KClcbn1cbmNsYXNzIEl0ZW17XG5pdGVtTmFtZSwgaXRlbVR5cGUsXG5pdGVtc3RhdHVzLCBpdGVtRGVzYywgcHJpY2Vcbn1cbmNsYXNzIEdhbWVNYW5hZ2Vye1xuTGlzdCBJdGVtTGlzdFxuZW51bSBTZWxlY3RDb21tYW5kXG5zdHJpbmcgY2hhcmFjdGVyRmlsZVBhdGhcbnN0cmluZyBpdGVtRmlsZVBhdGhcbkdhbWVTdGFydCgpXG5TYXZlKClcbkRlbGV0ZUl0ZW1JbnZlbnRvcnkoKVxufVxuY2xhc3MgVmlld1N0YXR1c3tcbkNoYXJhY3RlciBjaGFyYWN0ZXJcbj0gQWNjb3VudC5Mb2dpbkNoYXJhY3RlclxuU3RhdHVzKClcbn1cbmNsYXNzIFZpZXdJbnZlbnRvcnl7XG5EaWN0aW9uYXJ5IF9vd25lZEl0ZW1zXG5JbnZlbnRvcnkoKVxuU2hvd0l0ZW1MaXN0KClcbkVxdWlwbWVudE1hbmFnZXIoKVxufVxuY2xhc3MgU3RvcmV7XG5TdG9yZVNob3AoKVxuU3RvcmVEaXNwbGF5KClcbkJ1eVN0b3JlKClcblNlbGxTdG9yZSgpXG59XG5jbGFzcyBEdW5nZW9ue1xuRHVuZ2VvbkxvYmJ5KClcbkR1bmdlb25FbnRyYW5jZSgpXG5EdW5nZW9uQ2xlYXJQcm9jZXNzKClcbkZhaWxEdW5nZW9uKClcbkNsZWFyRHVuZ2VvbigpXG5NYXBwaW5nRHVuZ2VvbkxldmVsKClcbkRlY3JlYXNlQ2hhcmFjdGVySHAoKVxuSW5jcmVhc2VHb2xkKClcbn1cbmNsYXNzIEFQSU1hbmFnZXJ7XG5Qb3N0IEl0ZW0oKVxuR2V0IEl0ZW0oKVxuRmV0Y2ggSXRlbSgpXG5HZXQgQWNjb3VudCgpXG5Qb3N0IEFjY291bnQoKVxuUG9zdCBTdGF0dXMoKVxuR2V0IFN0YXR1cygpXG59IiwibWVybWFpZCI6bnVsbH0)
+
 
 ### 기능 구성
 
