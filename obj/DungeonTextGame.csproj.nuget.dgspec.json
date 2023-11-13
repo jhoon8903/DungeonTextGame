@@ -73,6 +73,22 @@
             "System.Drawing.Common": {
               "target": "Package",
               "version": "[8.0.0-rc.2.23479.14, )"
+            },
+            "System.Net.WebSockets": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Net.WebSockets.Client": {
+              "target": "Package",
+              "version": "[4.3.2, )"
+            },
+            "WebSocketSharp": {
+              "target": "Package",
+              "version": "[1.0.3-rc11, )"
+            },
+            "WebSocketSharp-netstandard": {
+              "target": "Package",
+              "version": "[1.0.1, )"
             }
           },
           "imports": [

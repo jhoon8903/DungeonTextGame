@@ -4,7 +4,7 @@ namespace DungeonTextGame;
 
 public static class Title
 {
-    public static void MainTitle()
+    public static async Task MainTitle()
     {
 
         OutputEncoding = Encoding.UTF8;
@@ -51,14 +51,14 @@ public static class Title
                     switch (selectedMenuItem)
                     {
                         case 0: 
-                            Account.LogIn();
-                            break;
+                            await Account.LogIn();
+                            return;
                         case 1:
                             Account.CreateAccount();
-                            break;
+                            return;
                         case 2:
                             Environment.Exit(0);
-                            break;
+                            return;
                     }
                     break;
             }

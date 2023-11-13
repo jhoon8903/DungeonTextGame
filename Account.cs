@@ -20,7 +20,7 @@ public static class Account
         }
     }
     
-    public static void LogIn()
+    public static async Task LogIn()
     {
         while (true)
         {
@@ -47,7 +47,7 @@ public static class Account
             if (VerifyPassword(pw, user.Pw))
             {
                 LoginCharacter = user;
-                GameManager.GameStart();
+              await GameManager.GameStart();
             }
             else
             {

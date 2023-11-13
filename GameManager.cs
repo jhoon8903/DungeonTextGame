@@ -64,10 +64,6 @@ public static class GameManager
                         continue;
                 }                                    
             }
-            else
-            {
-                continue;
-            }
         }
     }
     private static void InitItem()

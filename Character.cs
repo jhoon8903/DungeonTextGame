@@ -4,7 +4,7 @@ namespace DungeonTextGame;
 
 public class Character
 {
-    [JsonPropertyName("id")] public string Id { get; set; }
+    [JsonPropertyName("id")] public string? Id { get; set; }
     [JsonPropertyName("pw")]public string Pw { get; set; }
     [JsonPropertyName("dungeonClear")] public int dungeonCleatCount { get; set; }
     [JsonPropertyName("level")]public int Level { get; set; }

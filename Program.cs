@@ -1,10 +1,10 @@
 ﻿namespace DungeonTextGame;
 
-public class Program
+public static class Program
 {
-    public static void Main()
+    public static async Task Main()
     { 
         Account.LoadAccountData();
-        Title.MainTitle();
+        await Title.MainTitle();
     }
 }

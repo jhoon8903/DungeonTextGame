@@ -47,3 +47,4 @@
 /Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/SocketIO.Serializer.Core.dll
 /Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/SocketIO.Serializer.SystemTextJson.dll
 /Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/SocketIOClient.dll
+/Users/daniel/Documents/GitHub/DungeonTextGame/bin/Debug/net7.0/websocket-sharp.dll
