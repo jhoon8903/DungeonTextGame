@@ -13,6 +13,8 @@ Dungeon RPG
 |Devlop Env|Mac M1 Silcon|
 |Language|C#|
 |Redering|Rider Console|
+|Socket<br>Server|[SOCKET](https://github.com/jhoon8903/rpg-socket-server)|
+
 
 ### Class 구성
 
@@ -36,6 +38,7 @@ Dungeon RPG
 - Gold 지불 시 회복하여 HP 회복
 #### 5. 상점 기능
 - 구매 및 판매 기능 구현
-#### 6. 온라인 채팅 기능 (구현중)
+#### 6. 온라인 채팅 기능
 - Socket 사용하여 온라인 채팅 기능 구현
+- 사용자 : 메세지 구성으로 현재는 Local Server 까지만 구현
 
