@@ -18,7 +18,7 @@ Dungeon RPG
 
 ### Class 구성
 
-![image](https://github.com/jhoon8903/DungeonTextGame/assets/114923190/6bff9e87-10c9-4871-9737-104e452a743e)
+![](https://i.imgur.com/44h43hE.jpg)
 
 
 ### 기능 구성
