@@ -68,7 +68,7 @@ namespace DungeonTextGame
         private static async Task ConnectToServerAsync()
         {
             _client = new ClientWebSocket();
-            await _client.ConnectAsync(new Uri("ws://127.0.0.1:3000"), CancellationToken.None);
+            await _client.ConnectAsync(new Uri("ws://52.78.28.10:3000"), CancellationToken.None);
             WriteToConsole("Connected!");
         }
         private static void ClearScreen() => Clear();
